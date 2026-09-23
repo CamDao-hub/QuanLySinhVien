@@ -11,69 +11,102 @@
     <!-- AdminLTE CSS -->
     <link rel="stylesheet" href="/admin-lte-v4.9.1/dist/css/adminlte.min.css">
 </head>
+
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+
     <div class="app-wrapper">
 
         <!-- 1. Thanh SideBar bên trái -->
         <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+
             <div class="sidebar-brand">
                 <a href="#" class="brand-link">
-                    <span class="brand-text fw-light fs-4 ms-2">University Training</span>
+                    <span class="brand-text fw-light fs-4 ms-2">
+                        University Training
+                    </span>
                 </a>
             </div>
+
             <div class="sidebar-wrapper">
                 <nav class="mt-2">
                     <ul class="nav sidebar-menu flex-column" role="menu">
+
                         <li class="nav-item">
                             <a href="student.html" class="nav-link active">
-                                <i class="nav-icon bi bi-people-fill"></i>
+                                <i class="nav-icon bi bi-grid-fill"></i>
                                 <p>Sinh viên</p>
                             </a>
                         </li>
+
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon bi bi-book"></i>
                                 <p>Học phần</p>
                             </a>
                         </li>
+
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon bi bi-building"></i>
                                 <p>Phòng học</p>
                             </a>
                         </li>
+
                     </ul>
                 </nav>
             </div>
+
         </aside>
 
         <!-- 2. Nội dung chính bên phải -->
         <main class="app-main p-4">
+
             <!-- Header tiêu đề trang & Breadcrumb -->
             <div class="d-flex justify-content-between align-items-center mb-3">
-                <h2 class="mb-0 fw-normal">Quản lý sinh viên</h2>
-                <span class="text-muted fs-6">Home / Sinh viên</span>
+                <h2 class="mb-0 fw-normal">
+                    Quản lý sinh viên
+                </h2>
+
+                <span class="text-muted fs-6">
+                    Home / Sinh viên
+                </span>
             </div>
 
             <!-- Card chứa bảng và ô tìm kiếm -->
             <div class="card shadow-sm border-0">
+
                 <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
                     <div class="fw-bold text-secondary">
-                        <i class="bi bi-people me-1"></i> Danh sách sinh viên
+                        <i class="bi bi-grid me-1"></i>
+                        Danh sách sinh viên
                     </div>
-                    <!-- Chuyển hướng tới trang Form để thêm mới -->
+
+                    <!-- Nút Thêm sinh viên -->
                     <a href="index.html?page=form&mode=add" class="btn btn-primary">
-                        <i class="bi bi-plus-circle-fill me-1"></i> Thêm sinh viên
+                        <i class="bi bi-plus-circle-fill me-1"></i>
+                        Thêm sinh viên
                     </a>
                 </div>
 
                 <div class="card-body">
+
                     <!-- Ô Tìm kiếm -->
                     <div class="row mb-3">
                         <div class="col-md-5 d-flex gap-2">
-                            <input type="text" id="searchInput" class="form-control" placeholder="Tìm mã SV, họ tên, email...">
-                            <button type="button" id="searchBtn" class="btn btn-primary text-nowrap">
-                                <i class="bi bi-search"></i> Tìm kiếm
+                            <input
+                                type="text"
+                                id="searchInput"
+                                class="form-control"
+                                placeholder="Tìm mã SV, họ tên, email..."
+                            >
+
+                            <button
+                                type="button"
+                                id="searchBtn"
+                                class="btn btn-primary text-nowrap d-flex align-items-center gap-1"
+                            >
+                                <i class="bi bi-search"></i>
+                                Tìm kiếm
                             </button>
                         </div>
                     </div>
@@ -89,9 +122,10 @@
                                     <th>Email</th>
                                     <th>Số điện thoại</th>
                                     <th>Lớp</th>
-                                    <th class="text-end">Thao tác</th>
+                                    <th class="text-center">Thao tác</th>
                                 </tr>
                             </thead>
+
                             <tbody id="studentTableBody">
                                 <tr>
                                     <td colspan="7" class="text-center py-4 text-muted">
@@ -101,14 +135,19 @@
                             </tbody>
                         </table>
                     </div>
+
                 </div>
+
             </div>
+
         </main>
+
     </div>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/admin-lte-v4.9.1/dist/js/adminlte.min.js"></script>
     <script src="/assets/js/students.js"></script>
+
 </body>
 </html>
