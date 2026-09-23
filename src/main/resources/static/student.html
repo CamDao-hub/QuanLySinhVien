@@ -1,139 +1,310 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Quản lý sinh viên</title>
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
-    <!-- AdminLTE CSS -->
-    <link rel="stylesheet" href="/admin-lte-v4.9.1/dist/css/adminlte.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        crossorigin="anonymous"
+    >
+
+    <!-- AdminLTE -->
+    <link
+        rel="stylesheet"
+        href="/admin-lte-v4.9.1/dist/css/adminlte.min.css"
+    >
 </head>
 
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
 
     <div class="app-wrapper">
 
-        <!-- 1. Thanh SideBar bên trái -->
-        <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+        <!-- ================= SIDEBAR ================= -->
 
+        <aside class="app-sidebar bg-dark shadow" data-bs-theme="dark">
+
+            <!-- Logo -->
             <div class="sidebar-brand">
                 <a href="#" class="brand-link">
-                    <span class="brand-text fw-light fs-4 ms-2">
+                    <span class="brand-text fw-light">
                         University Training
                     </span>
                 </a>
             </div>
 
+            <!-- Sidebar -->
             <div class="sidebar-wrapper">
+
                 <nav class="mt-2">
-                    <ul class="nav sidebar-menu flex-column" role="menu">
 
+                    <ul
+                        class="nav sidebar-menu flex-column"
+                        data-lte-toggle="treeview"
+                        role="menu"
+                    >
+
+                        <!-- Sinh viên -->
                         <li class="nav-item">
-                            <a href="student.html" class="nav-link active">
-                                <i class="nav-icon bi bi-grid-fill"></i>
-                                <p>Sinh viên</p>
+
+                            <a href="#" class="nav-link active">
+
+                                <i class="nav-icon bi bi-people-fill"></i>
+
+                                <p>
+                                    Sinh viên
+                                </p>
+
                             </a>
+
                         </li>
 
+
+                        <!-- Học phần -->
                         <li class="nav-item">
+
                             <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-book"></i>
-                                <p>Học phần</p>
+
+                                <i class="nav-icon bi bi-book-fill"></i>
+
+                                <p>
+                                    Học phần
+                                </p>
+
                             </a>
+
                         </li>
 
+
+                        <!-- Thông báo -->
                         <li class="nav-item">
+
                             <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-building"></i>
-                                <p>Phòng học</p>
+
+                                <i class="nav-icon bi bi-megaphone-fill"></i>
+
+                                <p>
+                                    Thông báo
+                                </p>
+
                             </a>
+
                         </li>
 
                     </ul>
+
                 </nav>
+
             </div>
 
         </aside>
 
-        <!-- 2. Nội dung chính bên phải -->
-        <main class="app-main p-4">
 
-            <!-- Header tiêu đề trang & Breadcrumb -->
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h2 class="mb-0 fw-normal">
-                    Quản lý sinh viên
-                </h2>
+        <!-- ================= MAIN ================= -->
 
-                <span class="text-muted fs-6">
-                    Home / Sinh viên
-                </span>
-            </div>
+        <main class="app-main">
 
-            <!-- Card chứa bảng và ô tìm kiếm -->
-            <div class="card shadow-sm border-0">
+            <!-- Content Header -->
 
-                <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
-                    <div class="fw-bold text-secondary">
-                        <i class="bi bi-grid me-1"></i>
-                        Danh sách sinh viên
+            <div class="app-content-header">
+
+                <div class="container-fluid">
+
+                    <div class="row">
+
+                        <!-- Tiêu đề -->
+
+                        <div class="col-sm-6">
+
+                            <h3 class="mb-0">
+                                Quản lý sinh viên
+                            </h3>
+
+                        </div>
+
+
+                        <!-- Breadcrumb -->
+
+                        <div class="col-sm-6">
+
+                            <ol class="breadcrumb float-sm-end">
+
+                                <li class="breadcrumb-item">
+                                    <a href="#">
+                                        Home
+                                    </a>
+                                </li>
+
+                                <li
+                                    class="breadcrumb-item active"
+                                    aria-current="page"
+                                >
+                                    Sinh viên
+                                </li>
+
+                            </ol>
+
+                        </div>
+
                     </div>
 
-                    <!-- Nút Thêm sinh viên -->
-                    <a href="index.html?page=form&mode=add" class="btn btn-primary">
-                        <i class="bi bi-plus-circle-fill me-1"></i>
-                        Thêm sinh viên
-                    </a>
                 </div>
 
-                <div class="card-body">
+            </div>
 
-                    <!-- Ô Tìm kiếm -->
-                    <div class="row mb-3">
-                        <div class="col-md-5 d-flex gap-2">
-                            <input
-                                type="text"
-                                id="searchInput"
-                                class="form-control"
-                                placeholder="Tìm mã SV, họ tên, email..."
-                            >
 
-                            <button
-                                type="button"
-                                id="searchBtn"
-                                class="btn btn-primary text-nowrap d-flex align-items-center gap-1"
-                            >
-                                <i class="bi bi-search"></i>
-                                Tìm kiếm
-                            </button>
+            <!-- ================= CONTENT ================= -->
+
+            <div class="app-content">
+
+                <div class="container-fluid">
+
+                    <div class="card">
+
+                        <!-- Card Header -->
+
+                        <div class="card-header">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-sm-6">
+
+                                    <h3 class="card-title">
+
+                                        <i class="bi bi-list-ul me-1"></i>
+
+                                        Danh sách sinh viên
+
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="col-sm-6 text-sm-end mt-2 mt-sm-0">
+
+                                    <a
+                                        href="index.html?page=form"
+                                        class="btn btn-primary btn-sm"
+                                    >
+
+                                        <i class="bi bi-plus-circle me-1"></i>
+
+                                        Thêm sinh viên
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
                         </div>
-                    </div>
 
-                    <!-- Bảng Danh Sách -->
-                    <div class="table-responsive">
-                        <table class="table table-hover table-striped align-middle border-top">
-                            <thead>
-                                <tr class="text-secondary fs-7">
-                                    <th>STT</th>
-                                    <th>Mã sinh viên</th>
-                                    <th>Họ và tên</th>
-                                    <th>Email</th>
-                                    <th>Số điện thoại</th>
-                                    <th>Lớp</th>
-                                    <th class="text-center">Thao tác</th>
-                                </tr>
-                            </thead>
 
-                            <tbody id="studentTableBody">
-                                <tr>
-                                    <td colspan="7" class="text-center py-4 text-muted">
-                                        Đang tải dữ liệu...
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!-- Search -->
+
+                        <div class="card-body">
+
+                            <div class="row mb-3">
+
+                                <div class="col-md-5">
+
+                                    <div class="input-group">
+
+                                        <input
+                                            type="text"
+                                            id="searchInput"
+                                            class="form-control"
+                                            placeholder="Tìm mã SV, họ tên, email..."
+                                        >
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-primary"
+                                            onclick="searchStudents()"
+                                        >
+
+                                            <i class="bi bi-search me-1"></i>
+
+                                            Tìm kiếm
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- ================= TABLE ================= -->
+
+                            <div class="table-responsive">
+
+                                <table class="table table-hover table-bordered align-middle">
+
+                                    <thead class="table-light">
+
+                                        <tr>
+
+                                            <th style="width: 5%;">
+                                                STT
+                                            </th>
+
+                                            <th style="width: 12%;">
+                                                Mã sinh viên
+                                            </th>
+
+                                            <th style="width: 20%;">
+                                                Họ và tên
+                                            </th>
+
+                                            <th style="width: 25%;">
+                                                Email
+                                            </th>
+
+                                            <th style="width: 15%;">
+                                                Số điện thoại
+                                            </th>
+
+                                            <th style="width: 8%;">
+                                                Lớp
+                                            </th>
+
+                                            <th style="width: 15%;" class="text-center">
+                                                Thao tác
+                                            </th>
+
+                                        </tr>
+
+                                    </thead>
+
+
+                                    <tbody id="studentTableBody">
+
+                                        <tr>
+
+                                            <td
+                                                colspan="7"
+                                                class="text-center"
+                                            >
+                                                Đang tải dữ liệu...
+                                            </td>
+
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
                 </div>
@@ -142,12 +313,34 @@
 
         </main>
 
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="app-footer">
+
+            <div class="float-end d-none d-sm-inline">
+                University Training
+            </div>
+
+            <strong>
+                Copyright &copy; 2026
+            </strong>
+
+        </footer>
+
     </div>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/admin-lte-v4.9.1/dist/js/adminlte.min.js"></script>
+
+    <!-- AdminLTE JS -->
+
+    <script
+        src="/admin-lte-v4.9.1/dist/js/adminlte.min.js"
+    ></script>
+
+    <!-- Students JS -->
+
     <script src="/assets/js/students.js"></script>
 
 </body>
+
 </html>
